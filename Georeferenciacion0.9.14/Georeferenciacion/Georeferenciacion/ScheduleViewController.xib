@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Arimo-Regular.ttf">
+            <string>Arimo</string>
+            <string>Arimo</string>
+            <string>Arimo</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ScheduleViewController">
+            <connections>
+                <outlet property="nombreLbl" destination="Ude-lI-usP" id="gWs-it-cnh"/>
+                <outlet property="tableView" destination="Cep-6U-4ge" id="wkd-dy-ZyW"/>
+                <outlet property="tipoDeHorario" destination="7V0-G9-f2e" id="NDO-ze-4b2"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" alpha="0.80000000000000004" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h3a-jL-pY4">
+                    <rect key="frame" x="81" y="45" width="438" height="510"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Horario" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j1h-6T-2sd">
+                            <rect key="frame" x="35" y="12" width="56" height="19"/>
+                            <fontDescription key="fontDescription" name="Arimo" family="Arimo" pointSize="17"/>
+                            <color key="textColor" red="0.0" green="0.2666666667" blue="0.55294117649999996" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ude-lI-usP">
+                            <rect key="frame" x="15" y="39" width="37" height="17"/>
+                            <fontDescription key="fontDescription" name="Arimo" family="Arimo" pointSize="15"/>
+                            <color key="textColor" red="0.0" green="0.2666666667" blue="0.55294117649999996" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Cep-6U-4ge">
+                            <rect key="frame" x="8" y="89" width="422" height="413"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="separatorColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <outlet property="dataSource" destination="-1" id="iy1-Ka-X7O"/>
+                                <outlet property="delegate" destination="-1" id="XWQ-6E-Os0"/>
+                            </connections>
+                        </tableView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="12x-yS-Nba">
+                            <rect key="frame" x="408" y="15" width="15" height="15"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="15" id="i21-TB-iKf"/>
+                                <constraint firstAttribute="height" constant="15" id="xEo-1c-uiI"/>
+                            </constraints>
+                            <state key="normal" image="close"/>
+                            <connections>
+                                <action selector="Dissmis:" destination="-1" eventType="touchUpInside" id="aT3-0a-M6H"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7V0-G9-f2e">
+                            <rect key="frame" x="15" y="64" width="37" height="17"/>
+                            <fontDescription key="fontDescription" name="Arimo" family="Arimo" pointSize="15"/>
+                            <color key="textColor" red="0.0" green="0.2666666667" blue="0.55294117649999996" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clockLight" translatesAutoresizingMaskIntoConstraints="NO" id="nII-be-De6">
+                            <rect key="frame" x="15" y="17" width="12" height="12"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="12" id="UT1-Tx-O14"/>
+                                <constraint firstAttribute="width" constant="12" id="n04-Ae-NoM"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="Cep-6U-4ge" firstAttribute="top" secondItem="7V0-G9-f2e" secondAttribute="bottom" constant="8" id="1Xu-2f-dXG"/>
+                        <constraint firstAttribute="trailing" secondItem="Cep-6U-4ge" secondAttribute="trailing" constant="8" id="1sw-pT-EC9"/>
+                        <constraint firstAttribute="trailing" secondItem="12x-yS-Nba" secondAttribute="trailing" constant="15" id="6KP-M6-Yld"/>
+                        <constraint firstItem="nII-be-De6" firstAttribute="top" secondItem="h3a-jL-pY4" secondAttribute="top" constant="17" id="9y6-ae-2Sp"/>
+                        <constraint firstItem="j1h-6T-2sd" firstAttribute="leading" secondItem="nII-be-De6" secondAttribute="trailing" constant="8" id="BRA-kQ-A7x"/>
+                        <constraint firstItem="7V0-G9-f2e" firstAttribute="top" secondItem="Ude-lI-usP" secondAttribute="bottom" constant="8" id="EBW-Zu-Aqn"/>
+                        <constraint firstItem="7V0-G9-f2e" firstAttribute="leading" secondItem="h3a-jL-pY4" secondAttribute="leading" constant="15" id="J7y-65-9Yq"/>
+                        <constraint firstAttribute="width" secondItem="h3a-jL-pY4" secondAttribute="height" multiplier="6:7" priority="750" id="Lal-KS-lgd"/>
+                        <constraint firstItem="Ude-lI-usP" firstAttribute="leading" secondItem="h3a-jL-pY4" secondAttribute="leading" constant="15" id="M4U-qJ-fwp"/>
+                        <constraint firstAttribute="width" constant="400" id="M8x-I7-t1G"/>
+                        <constraint firstAttribute="bottom" secondItem="Cep-6U-4ge" secondAttribute="bottom" constant="8" id="Mmn-ca-jFL"/>
+                        <constraint firstItem="nII-be-De6" firstAttribute="leading" secondItem="h3a-jL-pY4" secondAttribute="leading" constant="15" id="O2Y-cP-bEW"/>
+                        <constraint firstItem="12x-yS-Nba" firstAttribute="top" secondItem="h3a-jL-pY4" secondAttribute="top" constant="15" id="ZoX-6M-Tu0"/>
+                        <constraint firstItem="Ude-lI-usP" firstAttribute="top" secondItem="j1h-6T-2sd" secondAttribute="bottom" constant="8" id="eLg-bk-ACH"/>
+                        <constraint firstItem="Cep-6U-4ge" firstAttribute="leading" secondItem="h3a-jL-pY4" secondAttribute="leading" constant="8" id="k21-Vy-CRl"/>
+                        <constraint firstItem="nII-be-De6" firstAttribute="top" secondItem="j1h-6T-2sd" secondAttribute="bottom" constant="13" id="uaw-Ym-Rxu"/>
+                        <constraint firstItem="j1h-6T-2sd" firstAttribute="top" secondItem="h3a-jL-pY4" secondAttribute="top" constant="12" id="wbk-BV-dx1"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="4"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="M8x-I7-t1G"/>
+                            <exclude reference="uaw-Ym-Rxu"/>
+                        </mask>
+                    </variation>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.33000000000000002" alpha="0.5" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="h3a-jL-pY4" secondAttribute="trailing" constant="5" id="3df-tC-jgl"/>
+                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="h3a-jL-pY4" secondAttribute="trailing" constant="15" id="41j-MP-uXB"/>
+                <constraint firstItem="h3a-jL-pY4" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="15" id="8V7-gm-lvQ"/>
+                <constraint firstItem="h3a-jL-pY4" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="9BT-se-dnY"/>
+                <constraint firstAttribute="bottom" secondItem="h3a-jL-pY4" secondAttribute="bottom" constant="30" id="ALv-cg-fS6"/>
+                <constraint firstItem="h3a-jL-pY4" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.8" id="H0A-6v-Clg"/>
+                <constraint firstItem="h3a-jL-pY4" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.85" priority="750" id="NMp-8r-IIe"/>
+                <constraint firstItem="h3a-jL-pY4" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="30" id="Tyn-Tw-Iaw"/>
+                <constraint firstItem="h3a-jL-pY4" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Yos-N6-NIJ"/>
+                <constraint firstItem="h3a-jL-pY4" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="inY-LA-OPi"/>
+                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="h3a-jL-pY4" secondAttribute="bottom" constant="15" id="nL4-fj-G9H"/>
+                <constraint firstItem="h3a-jL-pY4" firstAttribute="top" relation="greaterThanOrEqual" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="15" id="scL-ht-1P3"/>
+            </constraints>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="3df-tC-jgl"/>
+                    <exclude reference="9BT-se-dnY"/>
+                    <exclude reference="ALv-cg-fS6"/>
+                    <exclude reference="H0A-6v-Clg"/>
+                    <exclude reference="Tyn-Tw-Iaw"/>
+                </mask>
+            </variation>
+        </view>
+    </objects>
+    <resources>
+        <image name="clockLight" width="10" height="10"/>
+        <image name="close" width="20" height="20"/>
+    </resources>
+</document>
