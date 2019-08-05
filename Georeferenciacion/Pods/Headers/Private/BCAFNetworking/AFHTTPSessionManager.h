@@ -1,1 +1,0 @@
-../../../BCAFNetworking/BCAFNetworking/AFHTTPSessionManager.h

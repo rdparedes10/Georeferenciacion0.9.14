@@ -1,1 +1,0 @@
-../../../BCAFNetworking/UIKit+AFNetworking/UIImage+BCAFNetworking.h
